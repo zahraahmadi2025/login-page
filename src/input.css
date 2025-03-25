@@ -1,1 +1,4 @@
 @import "tailwindcss";
+@theme{
+    --color-login:rgba(255,255,255,0,5);
+}
