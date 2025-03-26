@@ -7,6 +7,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-green-700: oklch(0.527 0.154 150.069);
     --color-green-800: oklch(0.448 0.119 151.328);
     --color-black: #000;
     --color-white: #fff;
@@ -337,6 +338,24 @@
       max-width: 96rem !important;
     }
   }
+  .mx-\[12px\] {
+    margin-inline: 12px;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-\[50\%\] {
+    margin-block: 50%;
+  }
+  .my-auto {
+    margin-block: auto;
+  }
+  .ml-\[12px\] {
+    margin-left: 12px;
+  }
+  .ml-\[42px\] {
+    margin-left: 42px;
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -424,8 +443,20 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-\[200px\] {
     height: 200px;
+  }
+  .h-\[400px\] {
+    height: 400px;
+  }
+  .h-\[450px\] {
+    height: 450px;
+  }
+  .h-\[500px\] {
+    height: 500px;
   }
   .h-screen {
     height: 100vh;
@@ -445,8 +476,29 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[33\%\] {
+    width: 33%;
+  }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-\[45\%\] {
+    width: 45%;
+  }
   .w-\[50\%\] {
     width: 50%;
+  }
+  .w-\[60\%\] {
+    width: 60%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[80\%\] {
+    width: 80%;
   }
   .w-full {
     width: 100%;
@@ -843,6 +895,9 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -936,6 +991,12 @@
   }
   .rounded {
     border-radius: 0.25rem;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
+  .rounded-\[20px\] {
+    border-radius: 20px;
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -1052,6 +1113,9 @@
   .border-black {
     border-color: var(--color-black);
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1069,6 +1133,9 @@
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-green-700 {
+    background-color: var(--color-green-700);
   }
   .bg-green-800 {
     background-color: var(--color-green-800);
@@ -1257,8 +1324,35 @@
   .object-top {
     object-position: top;
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-\[8\%\] {
+    padding-block: 8%;
+  }
+  .py-\[9\%\] {
+    padding-block: 9%;
+  }
+  .py-\[10\%\] {
+    padding-block: 10%;
+  }
+  .py-\[11\%\] {
+    padding-block: 11%;
+  }
+  .py-\[12\%\] {
+    padding-block: 12%;
+  }
+  .py-\[50\%\] {
+    padding-block: 50%;
+  }
+  .pl-\[12px\] {
+    padding-left: 12px;
+  }
+  .pl-\[32px\] {
+    padding-left: 32px;
   }
   .text-center {
     text-align: center;
@@ -1398,6 +1492,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
