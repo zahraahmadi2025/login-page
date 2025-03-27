@@ -362,6 +362,9 @@
   .ml-\[15px\] {
     margin-left: 15px;
   }
+  .ml-\[16px\] {
+    margin-left: 16px;
+  }
   .ml-\[20px\] {
     margin-left: 20px;
   }
@@ -1356,6 +1359,12 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .text-\[22px\] {
+    font-size: 22px;
   }
   .text-\[25px\] {
     font-size: 25px;
