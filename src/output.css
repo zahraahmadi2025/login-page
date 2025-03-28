@@ -12,8 +12,6 @@
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
@@ -24,7 +22,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-login: rgba(255,255,255,0.3);
+    --color-login: rgba(255,255,255,0.4);
   }
 }
 @layer base {
@@ -341,29 +339,14 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .mr-\[15px\] {
-    margin-right: 15px;
-  }
   .mr-\[20\%\] {
     margin-right: 20%;
   }
   .mr-\[20px\] {
     margin-right: 20px;
   }
-  .mr-\[30\%\] {
-    margin-right: 30%;
-  }
-  .mr-\[40px\] {
-    margin-right: 40px;
-  }
-  .ml-\[12px\] {
-    margin-left: 12px;
-  }
   .ml-\[15px\] {
     margin-left: 15px;
-  }
-  .ml-\[16px\] {
-    margin-left: 16px;
   }
   .ml-\[20px\] {
     margin-left: 20px;
@@ -469,9 +452,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -971,9 +951,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-\[10px\] {
-    border-radius: 10px;
-  }
   .rounded-\[15px\] {
     border-radius: 15px;
   }
@@ -1348,10 +1325,6 @@
   .align-top {
     vertical-align: top;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -1362,9 +1335,6 @@
   }
   .text-\[20px\] {
     font-size: 20px;
-  }
-  .text-\[22px\] {
-    font-size: 22px;
   }
   .text-\[25px\] {
     font-size: 25px;
