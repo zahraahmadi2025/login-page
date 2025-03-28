@@ -9,7 +9,12 @@ bars.addEventListener("click",()=>{
     bars.style.display ="none";
     close.style.display="block";
 
-
-    
+});
+close.addEventListener("click",()=>{
+ horizontalNav.classList.add("w-full");
+ horizontalNav.classList.remove("w-[75%");
+ verticalNav.classList.add("hidden");
+ bars.style.display ="block";
+    close.style.display="none";
 
 });
