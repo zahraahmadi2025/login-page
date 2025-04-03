@@ -1923,9 +1923,60 @@
   .transform-view {
     transform-box: view-box;
   }
+  .sm\:h-\[100\%\] {
+    @media (width >= 40rem) {
+      height: 100%;
+    }
+  }
+  .sm\:h-\[100px\] {
+    @media (width >= 40rem) {
+      height: 100px;
+    }
+  }
+  .sm\:h-fit {
+    @media (width >= 40rem) {
+      height: fit-content;
+    }
+  }
   .sm\:h-full {
     @media (width >= 40rem) {
       height: 100%;
+    }
+  }
+  .sm\:w-\[100px\] {
+    @media (width >= 40rem) {
+      width: 100px;
+    }
+  }
+  .sm\:w-\[300px\] {
+    @media (width >= 40rem) {
+      width: 300px;
+    }
+  }
+  .sm\:w-full {
+    @media (width >= 40rem) {
+      width: 100%;
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:bg-left {
+    @media (width >= 40rem) {
+      background-position: left;
+    }
+  }
+  .sm\:text-xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .sm\:text-black {
+    @media (width >= 40rem) {
+      color: var(--color-black);
     }
   }
 }
