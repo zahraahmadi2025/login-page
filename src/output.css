@@ -229,9 +229,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
-  }
   .isolate {
     isolation: isolate;
   }
@@ -343,9 +340,6 @@
       max-width: 96rem !important;
     }
   }
-  .m-auto {
-    margin: auto;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -360,9 +354,6 @@
   }
   .ml-\[20px\] {
     margin-left: 20px;
-  }
-  .ml-auto {
-    margin-left: auto;
   }
   .box-border {
     box-sizing: border-box;
@@ -454,9 +445,6 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
-  .h-15 {
-    height: calc(var(--spacing) * 15);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -480,9 +468,6 @@
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
-  }
-  .w-15 {
-    width: calc(var(--spacing) * 15);
   }
   .w-\[20\%\] {
     width: 20%;
@@ -893,25 +878,11 @@
       --tw-space-y-reverse: 1;
     }
   }
-  .space-x-0\.5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .space-x-3 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
-  .space-x-3\.5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .space-x-4 {
@@ -1000,9 +971,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-  .overflow-x-auto {
-    overflow-x: auto;
   }
   .overflow-y-scroll {
     overflow-y: scroll;
@@ -1345,17 +1313,8 @@
   .object-top {
     object-position: top;
   }
-  .px-2\.5 {
-    padding-inline: calc(var(--spacing) * 2.5);
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
-  }
-  .px-3\.5 {
-    padding-inline: calc(var(--spacing) * 3.5);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -1368,9 +1327,6 @@
   }
   .py-\[5\%\] {
     padding-block: 5%;
-  }
-  .py-\[100px\] {
-    padding-block: 100px;
   }
   .pl-\[12px\] {
     padding-left: 12px;
@@ -1968,11 +1924,13 @@
   .transform-view {
     transform-box: view-box;
   }
-  .sm\:text-xl {
-    @media (width >= 40rem) {
-      font-size: var(--text-xl);
-      line-height: var(--tw-leading, var(--text-xl--line-height));
-    }
+}
+@layer Utilities {
+  :root {
+    --bg-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath3055%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%2332325d'%3e%3c/rect%3e%3ccircle r='37.395' cx='752.33' cy='448.4' fill='url(%26quot%3b%23SvgjsLinearGradient3056%26quot%3b)'%3e%3c/circle%3e%3ccircle r='15.51' cx='566.91' cy='122' fill='url(%26quot%3b%23SvgjsLinearGradient3057%26quot%3b)'%3e%3c/circle%3e%3ccircle r='35.695' cx='106.02' cy='217.17' fill='url(%26quot%3b%23SvgjsLinearGradient3058%26quot%3b)'%3e%3c/circle%3e%3ccircle r='52.95' cx='973.47' cy='76.54' fill='url(%26quot%3b%23SvgjsLinearGradient3059%26quot%3b)'%3e%3c/circle%3e%3ccircle r='53.845' cx='107.32' cy='345.16' fill='url(%26quot%3b%23SvgjsLinearGradient3060%26quot%3b)'%3e%3c/circle%3e%3ccircle r='39.23' cx='143.75' cy='143.38' fill='url(%26quot%3b%23SvgjsLinearGradient3061%26quot%3b)'%3e%3c/circle%3e%3ccircle r='45.86' cx='1280.82' cy='472.11' fill='url(%26quot%3b%23SvgjsLinearGradient3062%26quot%3b)'%3e%3c/circle%3e%3ccircle r='20.76' cx='998.44' cy='88.4' fill='rgba(88%2c 92%2c 167%2c 1)'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath3055'%3e%3crect width='1440' height='560' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3clinearGradient x1='677.5400000000001' y1='448.4' x2='827.1200000000001' y2='448.4' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3056'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(28%2c 29%2c 56%2c 1)' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='535.89' y1='122' x2='597.93' y2='122' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3057'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%234f4484' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='34.629999999999995' y1='217.16999999999996' x2='177.41' y2='217.16999999999996' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3058'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(28%2c 29%2c 56%2c 1)' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='867.57' y1='76.54' x2='1079.3700000000001' y2='76.54' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3059'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(126%2c 98%2c 134%2c 1)' offset='0.12'%3e%3c/stop%3e%3cstop stop-color='%237e6286' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='-0.37000000000000455' y1='345.16' x2='215.01' y2='345.16' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3060'%3e%3cstop stop-color='%2332325d' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23424488' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='65.29' y1='143.38' x2='222.20999999999998' y2='143.38' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3061'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%234f4484' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1372.54' y1='380.39' x2='1189.1' y2='563.8299999999999' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3062'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(7%2c 6%2c 57%2c 1)' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  }
+  .bg-svg-pattern {
+    background-image: var(--bg-svg);
   }
 }
 @property --tw-translate-x {

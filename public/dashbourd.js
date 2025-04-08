@@ -1,4 +1,4 @@
-const bars = document.getElementById("bar");
+const bars = document.getElementById("bars");
 const vnav =document.getElementById("vnav");
 const hnav =document.getElementById("hnav");
 bars.addEventListener("click",()=>{
