@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashbourd</title>
-    <script src="dashbourd.js" defer></script>
-    <script src="https://kit.fontawesome.com/409fdf9367.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../src/output.css">
-</head>
-<body>
-    <div class="relative">
-<div id="hnav" class=" float-end h-16 w-full bg-gray-700 text-white flex justify-between leading-16 items-center px-4">
-    <h2>Sharifi high School</h2>
-<i id="bars" class="fas fa-bars"></i>
-<i style="display: none;"     id="close" class="fas fa-times "></i>
-</div>
-<div id="vnav" class=" hidden h-screen w-[25%] bg-gray-700 absolute top-0 left-0 text-white" >
-    <ul class="flex flex-col gap-[15px] px-[10px]">
-        <li><a href="">
-            <i class="fa-solid fa-school"></i>
-            Classes</a></li>
-        <li><a href="">
-            <i class="fa-solid fa-users"></i>
-            Students</a></li>
-        <li><a href="">
-            <i class="fa-solid fa-id-card"></i>
-            Registered Students</a></li>
-        <li><a href="">
-            <i class="fa-solid fa-id-card"></i>
-            Unregistered students</a></li>
-    </ul>
-</div>
-</div>
-</body>
-</html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dashboard</title>
+     <script src="dashbourd.js" defer></script>
+     <link rel="stylesheet" href="../src/output.css">
+     <script src="https://kit.fontawesome.com/409fdf9367.js" crossorigin="anonymous"></script>
+ </head>
+ <body class="bg-gray-100">
+     <div class="w-full h-screen bg-svg-pattern relative">
+         <!-- horizontal nav -->
+         <div id="hnav" class=" transition-all duration-500 ease-linear float-right h-20 leading-20 w-full bg-white flex justify-between px-3 ">
+             <div class="flex justify-center items-center space-x-3 font-bold">
+                 <h3>Sharifi High School</h3>
+             </div>
+             <div class="flex  justify-center items-center space-x-4 ">
+                 <img class="h-14 w-14 rounded-full" src="./img/zahra.jpg" >
+                 <h4>Zahra Ahmadi</h4>
+                 <i class="fas fa-bell"></i>
+                 <i class="fas fa-bars" id="bars"></i>
+                 <i class="fas fa-sign-out"></i>
+             </div>
+         </div>
+         <!-- vnav -->
+         <div id="vnav" class=" transition-all duration-400 ease-linear absolute top-0 hidden py-2 lef-0 w-[20%] bg-white h-screen overflow-y-scroll">
+            <div class="w-full flex flex-col justify-center items-center font-bold mx-auto">
+                     <img class="h-14 w-14 rounded-full" src="./img/zahra.jpg" alt="">
+                 <h3>Zahra Ahmadi</h3>
+             </div>
+             <ul class="flex justify-start flex-col py-2.5">
+              <li><a href=""><i class="fas fa-bars  px-3 "></i><span>Dashboard</span></a></li>
+              <li><a href=""><i class="fas fa-users   px-3 "></i><span>Dashboard</span></a></li>
+              <li><a href=""><i class="fas fa-user   px-3"></i><span>Dashboard</span></a></li>
+             </ul>
+          </div>
+     </div>
+ </body>
+             
+     
+

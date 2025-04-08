@@ -1,20 +1,18 @@
-const bars =document.getElementById("bars");
-const horizontalNav =document.getElementById("hnav");
-const verticalNav =document.getElementById("vnav");
-const close =document.getElementById("close");
+const bars = document.getElementById("bar");
+const vnav =document.getElementById("vnav");
+const hnav =document.getElementById("hnav");
 bars.addEventListener("click",()=>{
-    horizontalNav.classList.add("w-[75%]");
-    horizontalNav.classList.remove("w-full");
-    verticalNav.classList.remove("hidden");
-    bars.style.display ="none";
-    close.style.display="block";
-
-});
-close.addEventListener("click",()=>{
- horizontalNav.classList.add("w-full");
- horizontalNav.classList.remove("w-[75%");
- verticalNav.classList.add("hidden");
- bars.style.display ="block";
-    close.style.display="none";
+  if(hnav.classList.contains("w-full")){
+  hnav.classList.add("w-[80%]");
+ hnav.classList.remove("w-full");
+ vnav.classList.remove("hidden");
+vnav.classList.add("flex");
+  }
+ else{
+ hnav.classList.add("w-full");
+hnav.classList.remove("w-[80%]");
+vnav.classList.remove("flex");
+vnav.classList.add("hidden");
+ }
 
 });
