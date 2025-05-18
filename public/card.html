@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کارت با انیمیشن هنگام اسکرول</title>
+  <link rel="stylesheet" href="../src/output.css">
+  
+</head>
+<body class="bg-gradient-to-br from-pink-50 to-indigo-100 min-h-screen p-8">
+
+  <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    
+  </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const cardContainer = document.getElementById("card-container");
+
+  const cardsData = [
+    { title: "کوه", description: "طبیعت کوهستان", image: "https://source.unsplash.com/400x300/?mountain" },
+    { title: "دریا", description: "دریا در غروب", image: "https://source.unsplash.com/400x300/?sea" },
+    { title: "جنگل", description: "طبیعت سرسبز", image: "https://source.unsplash.com/400x300/?forest" },
+    { title: "شهر", description: "نورهای شبانه", image: "https://source.unsplash.com/400x300/?city,night" },
+    { title: "بیابان", description: "شن‌های روان", image: "https://source.unsplash.com/400x300/?desert" },
+    { title: "دریاچه", description: "آرامش آب", image: "https://source.unsplash.com/400x300/?lake" },
+    { title: "غروب", description: "آسمان رنگی", image: "https://source.unsplash.com/400x300/?sunset" },
+    { title: "ابر", description: "ابرهای زیبا", image: "https://source.unsplash.com/400x300/?cloud" },
+    { title: "برف", description: "منظره زمستانی", image: "https://source.unsplash.com/400x300/?snow" }
+  ];
+
+  cardsData.forEach((card) => {
+    const cardDiv = document.createElement("div");
+    cardDiv.className =
+      "bg-white rounded-2xl shadow-md overflow-hidden transform opacity-0 translate-y-8 transition-all duration-700";
+
+    cardDiv.innerHTML = `
+      <img src="${card.image}" alt="${card.title}" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-lg font-bold text-gray-800 mb-2">${card.title}</h2>
+        <p class="text-gray-600 text-sm">${card.description}</p>
+      </div>
+    `;
+
+    cardContainer.appendChild(cardDiv);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-100", "translate-y-0");
+        entry.target.classList.remove("opacity-0", "translate-y-8");
+      } else {
+        entry.target.classList.remove("opacity-100", "translate-y-0");
+        entry.target.classList.add("opacity-0", "translate-y-8");
+      }
+    });
+  }, {
+    threshold: 0.3,
+  });
+
+  const allCards = document.querySelectorAll("#card-container > div");
+  allCards.forEach(card => observer.observe(card));
+});
+</script>
+</body>
+</html>

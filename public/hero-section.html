@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sidebar Navigation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../src/output.css">
 </head>
 <body class="relative bg-white text-gray-900">
 
@@ -76,10 +76,6 @@
       overlay.classList.remove('hidden');
     });
 
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('translate-x-full');
-      overlay.classList.add('hidden');
-    });
   </script>
 </body>
 </html>
