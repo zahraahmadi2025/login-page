@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body>
+    <div class="relative w-full max-w-xl mx-auto overflow-hidden">
+  <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+    <img src="https://via.placeholder.com/600x300?text=1" class="w-full shrink-0" />
+    <img src="https://via.placeholder.com/600x300?text=2" class="w-full shrink-0" />
+    <img src="https://via.placeholder.com/600x300?text=3" class="w-full shrink-0" />
+  </div>
+
+  <!-- دکمه‌های کنترل -->
+  <button id="prev" class="lg:absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+    &#8592;
+  </button>
+  <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+    &#8594;
+  </button>
+</div>
+<script>
+    <script>
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const totalSlides = slides.length;
+  let index = 0;
+
+  document.getElementById("next").addEventListener("click", () => {
+    index = (index + 1) % totalSlides;
+    updateSlider();
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+</script>
+</script>
+</body>
+</html>

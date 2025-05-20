@@ -2280,6 +2280,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .lg\:absolute {
+    @media (width >= 64rem) {
+      position: absolute;
+    }
+  }
   .lg\:mr-\[20\%\] {
     @media (width >= 64rem) {
       margin-right: 20%;
