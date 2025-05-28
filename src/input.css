@@ -11,3 +11,8 @@
         background-image: var(--bg-svg);
     }
 }
+@layer components{
+  .btn{
+    @apply bg-white border border-gray-200 rounded text-xl py-2 hover:bg-gray-100 shadow-sm;
+  }
+}
