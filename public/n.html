@@ -1,0 +1,100 @@
+const display = document.getElementById("display");
+const history = document.getElementById("history");
+const historyBtn = document.getElementById("history-btn");
+let expression = "";
+let historyList = [];
+
+function updateDisplay() {
+  display.innerText = expression || "0";
+}
+
+function evaluateExpression() {
+  try {
+    // تبدیل نمادها
+    const safeExpr = expression
+      .replace(/×/g, "*")
+      .replace(/÷/g, "/")
+      .replace(/−/g, "-")
+      .replace(/%/g, "%");
+
+    const result = eval(safeExpr);
+    historyList.push(`${expression} = ${result}`);
+    expression = result.toString();
+    updateDisplay();
+  } catch {
+    expression = "";
+    display.innerText = "Error";
+  }
+}
+
+document.querySelectorAll(".btn, button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const value = btn.innerText.trim();
+
+    switch (value) {
+      case "=":
+        evaluateExpression();
+        break;
+      case "C":
+        expression = "";
+        updateDisplay();
+        break;
+      case "DEL":
+        expression = expression.slice(0, -1);
+        updateDisplay();
+        break;
+      case "+/-":
+        if (expression) {
+          if (expression.startsWith("-")) {
+            expression = expression.slice(1);
+          } else {
+            expression = "-" + expression;
+          }
+          updateDisplay();
+        }
+        break;
+      case "CE":
+        expression = "";
+        updateDisplay();
+        break;
+      case "1/x":
+        try {
+          expression = (1 / eval(expression)).toString();
+          updateDisplay();
+        } catch {
+          display.innerText = "Error";
+        }
+        break;
+      case "x2":
+      case "x²":
+        try {
+          expression = Math.pow(eval(expression), 2).toString();
+          updateDisplay();
+        } catch {
+          display.innerText = "Error";
+        }
+        break;
+      case "√x":
+        try {
+          expression = Math.sqrt(eval(expression)).toString();
+          updateDisplay();
+        } catch {
+          display.innerText = "Error";
+        }
+        break;
+      default:
+        expression += value;
+        updateDisplay();
+    }
+  });
+});
+
+// نمایش تاریخچه
+historyBtn.addEventListener("click", () => {
+  if (history.classList.contains("hidden")) {
+    history.classList.remove("hidden");
+    history.innerHTML = historyList.map((item) => `<div>${item}</div>`).join("");
+  } else {
+    history.classList.add("hidden");
+  }
+});
