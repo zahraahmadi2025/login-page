@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(0.808 0.114 19.571);
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-amber-100: oklch(0.962 0.059 95.617);
     --color-yellow-50: oklch(0.987 0.026 102.212);
@@ -417,6 +418,15 @@
       max-width: 96rem !important;
     }
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-3\.5 {
+    margin-inline: calc(var(--spacing) * 3.5);
+  }
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -440,6 +450,9 @@
   }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -576,6 +589,12 @@
   .h-\[40px\] {
     height: 40px;
   }
+  .h-\[250px\] {
+    height: 250px;
+  }
+  .h-\[300\] {
+    height: 300;
+  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -584,6 +603,9 @@
   }
   .h-\[500px\] {
     height: 500px;
+  }
+  .h-\[600px\] {
+    height: 600px;
   }
   .h-\[1500px\] {
     height: 1500px;
@@ -632,6 +654,9 @@
   }
   .w-\[80px\] {
     width: 80px;
+  }
+  .w-\[85px\] {
+    width: 85px;
   }
   .w-\[90\%\] {
     width: 90%;
@@ -1296,6 +1321,9 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
   .rounded-\[15px\] {
     border-radius: 15px;
   }
@@ -1334,6 +1362,10 @@
   .rounded-t {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+  }
+  .rounded-t-2xl {
+    border-top-left-radius: var(--radius-2xl);
+    border-top-right-radius: var(--radius-2xl);
   }
   .rounded-l {
     border-top-left-radius: 0.25rem;
@@ -1495,8 +1527,14 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
+  }
   .bg-login {
     background-color: var(--color-login);
+  }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1757,6 +1795,9 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-36 {
+    padding-inline: calc(var(--spacing) * 36);
   }
   .px-\[40px\] {
     padding-inline: 40px;
@@ -2564,6 +2605,11 @@
   .lg\:absolute {
     @media (width >= 64rem) {
       position: absolute;
+    }
+  }
+  .lg\:my-3 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 3);
     }
   }
   .lg\:mr-\[20\%\] {
