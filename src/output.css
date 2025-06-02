@@ -14,6 +14,7 @@
     --color-cyan-400: oklch(0.789 0.154 211.53);
     --color-cyan-500: oklch(0.715 0.143 215.221);
     --color-cyan-600: oklch(0.609 0.126 221.723);
+    --color-sky-200: oklch(0.901 0.058 230.902);
     --color-blue-50: oklch(0.97 0.014 254.604);
     --color-blue-500: oklch(0.623 0.214 259.815);
     --color-blue-600: oklch(0.546 0.245 262.881);
@@ -420,6 +421,9 @@
   }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-3 {
+    margin-inline: calc(var(--spacing) * 3);
   }
   .mx-3\.5 {
     margin-inline: calc(var(--spacing) * 3.5);
@@ -1544,6 +1548,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-sky-200 {
+    background-color: var(--color-sky-200);
   }
   .bg-transparent {
     background-color: transparent;
